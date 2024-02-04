@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'gradient-violet': 'linear-gradient(111.19deg, rgb(34, 27, 78) 5.031%, rgb(50, 61, 95) 97.147%)'
+      }),
+      fontFamily: {
+        'audiowide': ['Audiowide', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
