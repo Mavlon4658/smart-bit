@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-    <div class="w-full overflow-hidden">
+    <div class="">
         <section class="relative">
             <img class="absolute top-0 left-0 w-full h-full object-cover object-bottom z-[-1]" src="../assets/images/home_bg.png" alt="">
             <main-container class="relative">
@@ -77,8 +77,10 @@ export default {
             <trade-graphic></trade-graphic>
         </section>
 
-        <section>
-            <main-container class="pb-[55px] pt-[102px]">
+        <section class="">
+            <main-container class="relative pb-[55px] pt-[102px]">
+                <img src="../assets/images/ellips_bg.png" class="absolute h-[880px] z-[-1] left-[-300px] top-0 scale-[2]" alt="">
+                <img src="../assets/images/bitcoin_bg.png" class="absolute right-[-245px] top-[72px] z-[-1] grayscale scale-[1.8] h-[812px]" alt="">
                 <h2 class="text-[#282b51] mb-[47px] text-5xl font-bold leading-[64px] tracking-[0%]">Frequently asked Questions</h2>
                 <main-accordion class="max-w-[995px]" :options="question_list"></main-accordion>
             </main-container>

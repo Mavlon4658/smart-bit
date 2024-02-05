@@ -39,7 +39,7 @@ export default {
                 <div class="flex gap-6">
                     <div>
                         <label class="text-white block text-[17px] font-bold leading-6 tracking-[0%] mb-[7px]">Name of graphics</label>
-                        <main-select class="bg-transparent border border-solid border-[#dbdbdb33] h-[52px] w-[298px]" :options="graphics"></main-select>
+                        <main-select :text_white="true" class="bg-transparent border border-solid border-[#dbdbdb33] h-[52px] w-[298px]" :options="graphics"></main-select>
                     </div>
                     <div>
                         <label class="text-white block text-[17px] font-bold leading-6 tracking-[0%] mb-[7px] text-center">Name of graphics</label>
@@ -69,10 +69,10 @@ export default {
         <div class="w-[409px] bg-[#d9d9d91a] rounded-[15px]">
             <div class="pt-[25px] pr-[50px] pl-[61px] pb-[46px]">
                 <label class="text-white block mb-3 text-[17px] font-bold leading-6 tracking-[0%]">Assets</label>
-                <main-select class="border shadow-[0px_4px_70px_0px_#a760f426] border-none text-white rounded-[10px] bg-[#ffffff33]" :options="crypto_list"></main-select>
+                <main-select :text_white="true" class="border shadow-[0px_4px_70px_0px_#a760f426] border-none rounded-[10px] bg-[#ffffff33]" :options="crypto_list"></main-select>
                 <label class="text-white block mb-3 mt-[22px] text-[17px] font-bold leading-6 tracking-[0%]">Assets</label>
-                <main-input value="00:06" class="mb-5 border shadow-[0px_4px_70px_0px_#a760f426] border-none text-white rounded-[10px] bg-[#ffffff33]" :options="crypto_list"></main-input>
-                <main-input value="89635" class="border shadow-[0px_4px_70px_0px_#a760f426] border-none text-[#1c1e35] rounded-[10px] bg-[#ffffff99]" :options="crypto_list"></main-input>
+                <main-input value="00:06" class="mb-5 border shadow-[0px_4px_70px_0px_#a760f426] border-none text-white rounded-[10px] !bg-[#ffffff33]" :options="crypto_list"></main-input>
+                <main-input value="89635" class="border shadow-[0px_4px_70px_0px_#a760f426] border-none !text-[#1c1e35] rounded-[10px] !bg-[#ffffff99]" :options="crypto_list"></main-input>
                 <div class="flex items-center justify-between gap-[25px] mt-6">
                     <button-green class="w-full h-[52px] text-[22px] font-bold leading-6 tracking-[0%]">High</button-green>
                     <button-red class="w-full h-[52px] text-[22px] font-bold leading-6 tracking-[0%]">Low</button-red>
@@ -82,7 +82,7 @@ export default {
                 <div class="text-[#2e355b] text-[17px] font-bold leading-6 tracking-[0%]">Closing: 20 JAN 12:08:12</div>
                 <div class="flex items-center justify-between my-[13px]">
                     <span class="text-[#2d2d2d] text-[15px] font-light leading-6 tracking-[0%]">Investments</span>
-                    <main-select class="w-[138px] h-[52px] px-[22px] text-[#2d2d2d] text-[15px] font-light leading-6 tracking-[0%]" :options="money_list"></main-select>
+                    <main-select class="!w-[138px] h-[52px] px-[22px] text-[#2d2d2d] text-[15px] font-light leading-6 tracking-[0%]" :options="money_list"></main-select>
                 </div>
                 <div class="text-[#2e355b] text-[17px] font-bold leading-6 tracking-[0%]">Closing: 20 JAN 12:08:12</div>
                 <button-blue class="w-full h-[52px] mt-[19px]">TRADE</button-blue>
