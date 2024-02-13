@@ -8,6 +8,7 @@ import MainInput from './MainInput.vue'
 import MainSelect from './MainSelect.vue'
 import InputPhone from './InputPhone.vue'
 import MainAccordion from './MainAccordion.vue'
+import BgParticles from './BgParticles.vue'
 
 export default {
     Logo,
@@ -20,4 +21,5 @@ export default {
     MainSelect,
     InputPhone,
     MainAccordion,
+    BgParticles,
 };

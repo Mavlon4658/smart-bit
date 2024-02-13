@@ -32,6 +32,7 @@ export default {
     <div class="">
         <section class="relative">
             <img class="absolute top-0 left-0 w-full h-full object-cover object-bottom z-[-1]" src="../assets/images/home_bg.png" alt="">
+            <BgParticles idName="1"/>
             <main-container class="relative">
                 <img class="absolute top-[47px] left-[-370px]" src="../assets/images/home_left_coin.png" alt="">
                 <img class="absolute top-[71px] right-[-244px]" src="../assets/images/home_right_coin.png" alt="">
@@ -73,8 +74,9 @@ export default {
             </main-container>
         </section>
 
-        <section class="bg-gradient-violet pb-[70px] pt-[59px]">
-            <trade-graphic></trade-graphic>
+        <section class="relative bg-gradient-violet pb-[70px] pt-[59px]">
+            <BgParticles idName="2"/>
+            <trade-graphic class="relative"></trade-graphic>
         </section>
 
         <section class="">
