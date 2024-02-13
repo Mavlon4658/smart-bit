@@ -4,9 +4,9 @@ export default {
     data () {
         return {
             navs: [
-                'Info',
-                'About Us',
-                'Bonus'
+                {title: 'Info', path: 'Faq'},
+                {title: 'About Us', path: 'AboutUs'},
+                {title: 'Bonus', path: 'Bonus'},
             ],
             lang_list: [
                 {name: "En", flag: 'GB'},
@@ -44,24 +44,28 @@ export default {
                 <nav class="flex items-center gap-10">
                     <router-link
                         class="text-white text-lg font-bold leading-[23px] tracking-[0%] text-left uppercase"
-                        to="#"
+                        :to="{name: item.path}"
                         v-for="(item, i) in navs"
                         :key="i"
                     >
-                        {{ item }}
+                        {{ item.title }}
                     </router-link>
                 </nav>
 
                 <div class="flex items-center gap-[33px]">
                     <div class="flex items-center gap-[15px]">
-                        <button-picton class="h-[46px] w-[198px] gap-10">
-                            <span>REGISTRATION</span>
-                            <img src="../assets/images/icons/arrow-rigth.svg" alt="">
-                        </button-picton>
-                        <button-green class="h-[46px] w-[136px] gap-10">
-                            <span>Login</span>
-                            <img src="../assets/images/icons/arrow-rigth.svg" alt="">
-                        </button-green>
+                        <router-link :to="{name: 'Register'}">
+                            <button-picton class="h-[46px] w-[198px] gap-10">
+                                <span>REGISTRATION</span>
+                                <img src="../assets/images/icons/arrow-rigth.svg" alt="">
+                            </button-picton>
+                        </router-link>
+                        <router-link :to="{name: 'LogIn'}">
+                            <button-green class="h-[46px] w-[136px] gap-10">
+                                <span>Login</span>
+                                <img src="../assets/images/icons/arrow-rigth.svg" alt="">
+                            </button-green>
+                        </router-link>
                     </div>
                     <div class="flex relative">
                         <button @click="langListToggle()" class="relative flex items-center gap-[13px]">

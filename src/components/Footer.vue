@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-    <footer class="relative">
+    <footer class="relative z-[2]">
         <img class="absolute top-0 left-0 w-full h-full object-cover object-top" src="../assets/images/footer_bg.png" alt="">
         <main-container class="relative pt-[146px] pb-[70px]">
             <div>
