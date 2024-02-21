@@ -75,7 +75,7 @@ export default {
                         @click="tab_current = item"
                         class="pt-[14px] pb-[11px] px-[67px]"
                         :class="{
-                            'bg-white text-[#515971] font-medium border shadow-[0px_4px_70px_0px_#a760f426] backdrop-blur-[26px] border-solid border-[#dfe5f9]': tab_current != item
+                            'bg-white !text-[#515971] font-medium border shadow-[0px_4px_70px_0px_#a760f426] backdrop-blur-[26px] border-solid border-[#dfe5f9]': tab_current != item
                         }"
                     >{{ item }}</button-blue>
                 </div>

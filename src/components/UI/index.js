@@ -10,6 +10,7 @@ import InputPhone from './inputs/InputPhone.vue'
 import MainAccordion from './MainAccordion.vue'
 import BgParticles from './BgParticles.vue'
 import InputDay from './inputs/InputDay.vue'
+import MainTable from './MainTable.vue'
 
 export default {
     Logo,
@@ -23,5 +24,6 @@ export default {
     InputPhone,
     MainAccordion,
     BgParticles,
-    InputDay
+    InputDay,
+    MainTable,
 };

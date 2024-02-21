@@ -11,6 +11,15 @@ export default {
       }),
       fontFamily: {
         'audiowide': ['Audiowide', 'sans-serif'],
+      },
+      keyframes: {
+        'voise': {
+          '0': { opacity: '.35', height: '8px' },
+          '100%': { opacity: '1', height: '25px' }
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
       }
     },
   },

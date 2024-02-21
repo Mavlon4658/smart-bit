@@ -76,7 +76,9 @@ export default {
 
         <section class="relative bg-gradient-violet pb-[70px] pt-[59px]">
             <BgParticles idName="2"/>
-            <trade-graphic class="relative"></trade-graphic>
+            <main-container>
+                <trade-graphic class="relative"></trade-graphic>
+            </main-container>
         </section>
 
         <section class="">
