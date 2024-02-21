@@ -38,9 +38,10 @@ export default {
                 <button
                     v-for="(item, i) in payment"
                     :key="i"
-                    class="box-border border rounded-md border-solid border-[#dbdbdb] bg-white h-[75px] grid place-content-center"
+                    class="box-border  rounded-md border-solid bg-white h-[75px] grid place-content-center"
                     :class="{
-                        'border-2 border-[#366AEF]': item.name == value
+                        'border-2 border-[#366AEF]': item.name == value,
+                        'border border-[#dbdbdb]': item.name != value,
                     }"
                     @click="$emit('update:value', item.name)"
                 >
