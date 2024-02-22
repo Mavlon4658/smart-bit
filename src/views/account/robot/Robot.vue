@@ -105,37 +105,37 @@ export default {
 </script>
 
 <template>
-    <div class="flex gap-6 shadow-[0px_0px_15.3px_0px_#daddff] rounded-[25px] bg-[#fcfffe] pt-6 pb-[27px] pl-[47px] pr-[59px] mb-[45px]">
+    <div class="flex flex-col md:flex-row gap-6 shadow-[0px_0px_15.3px_0px_#daddff] rounded-2xl md:rounded-[25px] bg-[#fcfffe] p-5 md:pt-6 md:pb-[27px] md:pl-[47px] md:pr-[59px] mb-9 md:mb-[45px]">
         <div class="w-full">
-            <label class="block text-[#515971] text-base font-semibold leading-6 mb-4">Выберите счет</label>
-            <main-input class="h-[52px]" v-model:value="account_name" placeholder="Название счета.com"/>
+            <label class="block text-[#515971] text-base font-semibold leading-6 mb-2 md:mb-4">Выберите счет</label>
+            <main-input class="h-[47px] md:h-[52px]" v-model:value="account_name" placeholder="Название счета.com"/>
         </div>
-        <div class="w-[429px]">
-            <label class="block text-[#515971] text-base font-semibold leading-6 mb-4">Текущий баланс</label>
-            <main-input class="h-[52px] text-[#366AEF] font-semibold" v-model:value="current_balance" placeholder="Current blance"/>
+        <div class="md:w-[429px]">
+            <label class="block text-[#515971] text-base font-semibold leading-6 mb-2 md:mb-4">Текущий баланс</label>
+            <main-input class="h-[47px] md:h-[52px] text-[#366AEF] font-semibold" v-model:value="current_balance" placeholder="Current blance"/>
         </div>
         <div class="min-w-[247px] flex-col flex items-center justify-end">
             <div v-if="voise_animation" class="h-[25px] w-full flex justify-center items-center gap-[2px] mb-4">
                 <div
                     v-for="item in 30"
                     :key="item"
-                    class="bar animate-[voise_600ms_linear_infinite_alternate] w-[3px]"
+                    class="bar bottom-0 h-[3px] rounded-[5px] animate-[voise_600ms_linear_infinite_alternate] w-[3px]"
                     :class="getRandomBgColor(item)"
                     :style="`animation-delay: ${getRandomAnimationDuration(item)}ms;`"
                 ></div>
             </div>
 
-            <button-picton @click="voise_animation = true" class="h-[51px] w-full">
+            <button-picton @click="voise_animation = true" class="h-[45px] md:h-[51px] w-full">
                 <span class="text-[17px] font-extrabold leading-[22px]">Start</span>
             </button-picton>
         </div>
     </div>
 
-    <div class="max-w-[1340px] mx-auto grid grid-cols-9 gap-y-[13px] gap-x-[11px] mb-9">
+    <div class="max-w-[1340px] mx-auto grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-9 gap-y-[13px] gap-x-[11px] mb-9">
         <button
             v-for="(item, i) in currencies"
             :key="i"
-            class="rounded-[5px] border-2 border-solid  text-[#5b6076] text-[15px] font-extrabold leading-[19px] h-[51px]"
+            class="rounded-[5px] border-2 border-solid  text-[#5b6076] text-xs sm:text-[15px] font-extrabold sm:leading-[19px] h-[45px] sm:h-[51px]"
             :class="{
                 'border-[#57D188]': selected_currency.includes(item),
                 'border-[#d4d6e2]': !selected_currency.includes(item)
@@ -146,18 +146,8 @@ export default {
         </button>
     </div>
 
-    <div class="text-[#202337] text-[17px] font-normal leading-[22px] ml-7">Информация о работе алгоритма</div>
-    <div class="mt-5 mb-[58px]">
-        <main-table :head_size="14" :body_size="13" :table="table"></main-table>
+    <div class="text-[#202337] text-[17px] font-normal leading-[22px] lg:ml-7">Информация о работе алгоритма</div>
+    <div class="sm:mb-[58px]">
+        <main-table :head_size="14" :body_size="13" :table="table" :table_width="1110"></main-table>
     </div>
 </template>
-
-<style>
-
-.bar {
-    bottom: 0px;
-    height: 3px;
-    width: 10px;
-    border-radius: 5px;
-}
-</style>

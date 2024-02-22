@@ -61,7 +61,7 @@ export default {
                                 'text-white': !light,
                             }"
                         >Traders Choise</label>
-                        <div class="flex w-full sm:w-[210px] h-[52px] overflow-hidden rounded-[25px]">
+                        <div class="flex w-full sm:w-[210px] h-[45px] sm:h-[52px] overflow-hidden rounded-[25px]">
                             <div class="bg-[#F1364E] w-[70%] flex items-center justify-center text-white text-[17px] font-bold leading-6 tracking-[0%]">70%</div>
                             <div class="bg-[#57D188] w-[30%] flex items-center justify-center text-white text-[17px] font-bold leading-6 tracking-[0%]">30%</div>
                         </div>
@@ -145,18 +145,18 @@ export default {
                     }"
                 ></main-input>
                 <div class="flex items-center justify-between gap-[25px] mt-6">
-                    <button-green class="w-full h-[52px] text-[22px] font-bold leading-6 tracking-[0%]">High</button-green>
-                    <button-red class="w-full h-[52px] text-[22px] font-bold leading-6 tracking-[0%]">Low</button-red>
+                    <button-green class="w-full h-[45px] sm:h-[52px] text-[22px] font-bold leading-6 tracking-[0%]">High</button-green>
+                    <button-red class="w-full h-[45px] sm:h-[52px] text-[22px] font-bold leading-6 tracking-[0%]">Low</button-red>
                 </div>
             </div>
             <div class="rounded-[0px_0px_15px_15px] bg-[#d9d9d9] py-5 pr-5 sm:pr-[50px] pl-5 sm:pl-[61px]">
                 <div class="text-[#2e355b] text-[17px] font-bold leading-6 tracking-[0%]">Closing: 20 JAN 12:08:12</div>
                 <div class="flex items-center justify-between my-[13px]">
                     <span class="text-[#2d2d2d] text-[15px] font-light leading-6 tracking-[0%]">Investments</span>
-                    <main-select class="!w-[138px] h-[52px] px-[22px] text-[#2d2d2d] text-[15px] font-light leading-6 tracking-[0%]" :options="money_list"></main-select>
+                    <main-select class="!w-[138px] h-[45px] sm:h-[52px] px-[22px] text-[#2d2d2d] text-[15px] font-light leading-6 tracking-[0%]" :options="money_list"></main-select>
                 </div>
                 <div class="text-[#2e355b] text-[17px] font-bold leading-6 tracking-[0%]">Closing: 20 JAN 12:08:12</div>
-                <button-blue class="w-full h-[52px] mt-[19px]">TRADE</button-blue>
+                <button-blue class="w-full h-[45px] sm:h-[52px] mt-[19px]">TRADE</button-blue>
             </div>
         </div>
     </div>

@@ -42,15 +42,15 @@ export default {
 </script>
 
 <template>
-    <div class="flex items-end justify-between gap-[122px] mb-[50px]">
+    <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-[122px] mb-10 lg:mb-[50px]">
         <div>
-            <h1 class="mb-4 text-[#1f263d] text-[40px] font-extrabold leading-[51px]">Транзакции</h1>
+            <h1 class="mb-4 text-[#1f263d] text-3xl sm:text-[40px] font-extrabold sm:leading-[51px]">Транзакции</h1>
             <p class="font-normal text-sm leading-[18px] text-[#202337]">More financial information You can find here.</p>
         </div>
-        <button-green class="px-[65px] h-[60px] text-[17px]">
+        <button-green class="px-10 sm:px-[65px] h-[45px] sm:h-[60px] text-[17px]">
             <span class="whitespace-nowrap">Contact to support</span>
         </button-green>
     </div>
 
-    <main-table :table="table"></main-table>
+    <main-table :table="table" :table_width="600"></main-table>
 </template>
