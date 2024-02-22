@@ -82,7 +82,7 @@ export default {
         </section>
 
         <section class="">
-            <main-container class="relative sm:pb-[55px] pb-0 md:pt-[102px] pt-[50px]">
+            <main-container class="relative sm:pb-[55px] pb-5 md:pt-[102px] pt-[50px]">
                 <img src="../assets/images/ellips_bg.png" class="absolute hidden md:block h-[880px] z-[-1] left-[-300px] top-0 scale-[2]" alt="">
                 <img src="../assets/images/bitcoin_bg.png" class="absolute hidden md:block right-[-245px] top-[72px] z-[-1] grayscale scale-[1.8] h-[812px]" alt="">
                 <h2 class="text-[#282b51] sm:mb-[47px] mb-5 md:text-5xl sm:text-4xl text-3xl font-bold md:leading-[64px] tracking-[0%]">Frequently asked Questions</h2>
