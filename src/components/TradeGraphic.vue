@@ -39,11 +39,11 @@ export default {
 </script>
 
 <template>
-    <div class="flex gap-[50px]">
-        <div class="flex flex-col justify-between">
-            <div class="flex items-start justify-between">
-                <div class="flex gap-6">
-                    <div>
+    <div class="flex flex-col lg:flex-row gap-5 sm:gap-10 xl:gap-[50px]">
+        <div class="flex flex-col gap-3 xl:gap-0 justify-between">
+            <div class="flex items-start flex-col xl:flex-row gap-5 xl:gap-0 justify-between">
+                <div class="flex gap-6 w-full xl:w-auto flex-col sm:flex-row justify-between xl:justify-start">
+                    <div class="w-full xl:w-auto">
                         <label
                             class="block text-[19px] font-bold leading-6 tracking-[0%] mb-[7px]"
                             :class="{
@@ -51,17 +51,17 @@ export default {
                                 'text-white': !light
                             }"
                         >Name of graphics</label>
-                        <main-select :text_white="!light" class="bg-transparent border border-solid  h-[52px] !w-[298px]" :class="{'border-[#dbdbdb33]': !light}" :options="graphics"></main-select>
+                        <main-select :text_white="!light" class="bg-transparent border border-solid  h-[52px] w-full xl:w-[298px]" :class="{'border-[#dbdbdb33]': !light}" :options="graphics"></main-select>
                     </div>
-                    <div>
+                    <div class="w-full sm:w-auto">
                         <label
-                            class="block text-[19px] font-bold leading-6 tracking-[0%] mb-[7px] text-center"
+                            class="block text-[19px] font-bold leading-6 tracking-[0%] mb-[7px] sm:text-center"
                             :class="{
                                 'text-[#5B6076]': light,
                                 'text-white': !light,
                             }"
                         >Traders Choise</label>
-                        <div class="flex w-[210px] h-[52px] overflow-hidden rounded-[25px]">
+                        <div class="flex w-full sm:w-[210px] h-[52px] overflow-hidden rounded-[25px]">
                             <div class="bg-[#F1364E] w-[70%] flex items-center justify-center text-white text-[17px] font-bold leading-6 tracking-[0%]">70%</div>
                             <div class="bg-[#57D188] w-[30%] flex items-center justify-center text-white text-[17px] font-bold leading-6 tracking-[0%]">30%</div>
                         </div>
@@ -75,12 +75,12 @@ export default {
                             'text-white': !light
                         }"
                     >Zoom</label>
-                    <div class="flex gap-4">
+                    <div class="flex gap-2 sm:gap-4">
                         <button
                             v-for="(item, i) in zoom"
                             :key="i"
                             @click="zoom_select = item"
-                            class="w-[50px] h-[52px] flex items-center justify-center border rounded-[10px] border-solid text-[17px] font-bold leading-6 tracking-[0%]"
+                            class="w-10 sm:w-[50px] h-10 sm:h-[52px] flex items-center justify-center border rounded-[10px] border-solid text-sm sm:text-[17px] font-bold leading-6 tracking-[0%]"
                             :class="{
                                 'bg-[#ffffff80] border-[rgba(255,255,255,0)]': zoom_select == item && !light,
                                 'bg-[#51597180] text-white': zoom_select == item && light,
@@ -95,14 +95,15 @@ export default {
                 <img src="../assets/images/trade_graphic.png" class="w-full" alt="">
             </div>
         </div>
+
         <div
-            class="w-[409px]  rounded-[15px]"
+            class="w-full lg:w-[409px]  rounded-[15px]"
             :class="{
                 'bg-[#6b6b6b1a]': light,
                 'bg-[#d9d9d91a]': !light
             }"
         >
-            <div class="pt-[25px] pr-[50px] pl-[61px] pb-[46px]">
+            <div class="pt-[25px] pr-5 sm:pr-[50px] pl-5 sm:pl-[61px] pb-8 sm:pb-[46px]">
                 <label
                     class="block mb-3 text-[17px] font-bold leading-6 tracking-[0%]"
                     :class="{
@@ -148,7 +149,7 @@ export default {
                     <button-red class="w-full h-[52px] text-[22px] font-bold leading-6 tracking-[0%]">Low</button-red>
                 </div>
             </div>
-            <div class="rounded-[0px_0px_15px_15px] bg-[#d9d9d9] py-5 pr-[50px] pl-[61px]">
+            <div class="rounded-[0px_0px_15px_15px] bg-[#d9d9d9] py-5 pr-5 sm:pr-[50px] pl-5 sm:pl-[61px]">
                 <div class="text-[#2e355b] text-[17px] font-bold leading-6 tracking-[0%]">Closing: 20 JAN 12:08:12</div>
                 <div class="flex items-center justify-between my-[13px]">
                     <span class="text-[#2d2d2d] text-[15px] font-light leading-6 tracking-[0%]">Investments</span>

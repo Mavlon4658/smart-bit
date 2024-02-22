@@ -17,17 +17,17 @@ export default {
 </script>
 
 <template>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col sm:gap-6 gap-3">
         <div class="shadow-[0px_4px_70px_0px_rgba(167,96,244,0.15)] rounded-[40px] bg-white" v-for="(item, i) in options" :key="i">
             <button 
                 :id="`faqs-title-0${i}`" 
                 type="button"
-                class="flex items-center justify-between w-full text-left pt-7 pb-[25px] px-[42px]"
+                class="flex items-center justify-between w-full text-left sm:pt-7 pt-5 sm:pb-[25px] pb-5 sm:px-[42px] px-5"
                 @click="expanded == i ? expanded = null : expanded = i" 
                 :aria-expanded="expanded == i" 
                 :aria-controls="`faqs-text-0${i}`"
             >
-                <span class="text-[#495381] text-[22px] font-medium leading-9 tracking-[0%]">{{ item.name }}</span>
+                <span class="text-[#495381] sm:text-[22px] text-base font-medium sm:leading-9 tracking-[0%]">{{ item.name }}</span>
                 <svg class="fill-[#735cff] shrink-0 ml-8" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
                     <rect y="7" width="19" height="5" rx="1"
                         class="transform origin-center transition duration-200 ease-out"
@@ -45,7 +45,7 @@ export default {
                 :class="expanded == i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
                 <div class="overflow-hidden">
-                    <p class="pb-[26px] px-[42px] text-[#495381] text-[22px] font-medium leading-[29px] tracking-[0%]">
+                    <p class="sm:pb-[26px] pb-5 sm:px-[42px] px-5 text-[#495381] sm:text-[22px] text-base font-medium sm:leading-[29px] tracking-[0%]">
                         {{ item.description || demo_text }}
                         
                     </p>
