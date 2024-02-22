@@ -233,6 +233,7 @@ export default {
                         :to="{name: item.path}"
                         v-for="(item, i) in navs"
                         :key="i"
+                        @click="menu_active = false"
                     >
                         {{ item.title }}
                     </router-link>
@@ -244,6 +245,7 @@ export default {
                         :to="{name: item.path}"
                         v-for="(item, i) in navs2"
                         :key="i"
+                        @click="menu_active = false"
                     >
                         {{ item.title }}
                     </router-link>
@@ -251,13 +253,13 @@ export default {
 
                 <div v-if="!checkLogIn()" class="flex flex-col items-center mt-5 gap-[15px]">
                     <router-link :to="{name: 'Register'}" class="w-full">
-                        <button-picton class="h-[46px] w-full justify-between px-4 gap-10">
+                        <button-picton class="h-[46px] w-full justify-between px-4 gap-10" @click="menu_active = false">
                             <span>REGISTRATION</span>
                             <img src="../assets/images/icons/arrow-rigth.svg" alt="">
                         </button-picton>
                     </router-link>
                     <router-link :to="{name: 'LogIn'}" class="w-full">
-                        <button-green class="h-[46px] w-full justify-between px-4 gap-10">
+                        <button-green class="h-[46px] w-full justify-between px-4 gap-10" @click="menu_active = false">
                             <span>Login</span>
                             <img src="../assets/images/icons/arrow-rigth.svg" alt="">
                         </button-green>

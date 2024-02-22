@@ -11,9 +11,9 @@ export default {
 </script>
 
 <template>
-    <div class="flex items-end justify-between gap-[122px] mb-[50px]">
+    <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-[122px] mb-10 lg:mb-[50px]">
         <div>
-            <div class="mb-4 text-[#1f263d] text-[40px] font-extrabold leading-[51px]">Запуск автоматической торговли</div>
+            <div class="mb-4 text-[#1f263d] text-3xl sm:text-[40px] font-extrabold sm:leading-[51px]">Запуск автоматической торговли</div>
             <p class="font-normal text-sm leading-[18px] text-[#202337]">Для запуска автоматической торговли необходимо запустить алгоритм, нажав на кнопку Старт. <br> Торговый алгоритм остановится автоматически по истечению каждых календарных суток GMT (по Гринвичу).</p>
         </div>
         <div v-if="$route.name != 'RobotKey'" class="bg-[#9499A1] py-4 px-[26px] rounded-[5px] min-w-72">
@@ -30,12 +30,3 @@ export default {
     <router-view></router-view>
 </template>
 
-<style>
-
-.bar {
-    bottom: 0px;
-    height: 3px;
-    width: 10px;
-    border-radius: 5px;
-}
-</style>

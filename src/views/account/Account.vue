@@ -15,18 +15,19 @@ export default {
 </script>
 
 <template>
-    <div class="flex items-end justify-between gap-[122px] mb-[50px]">
+    <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-[122px] mb-10 lg:mb-[50px]">
         <div>
-            <h1 class="mb-4 text-[#1f263d] text-[40px] font-extrabold leading-[51px]">Personal details</h1>
+            <h1 class="mb-4 text-[#1f263d] text-3xl sm:text-[40px] font-extrabold sm:leading-[51px]">Personal details</h1>
             <p class="font-normal text-sm leading-[18px] text-[#202337] max-w-[660px]">Here you can change your personal information. To finish this operation, you must enter renewed information, your account password and press Change button.</p>
         </div>
-        <button-green class="px-[65px] h-[60px] text-[17px]">
+        <button-green class="px-10 sm:px-[65px] h-[45px] sm:h-[60px] text-[17px]">
             <span class="whitespace-nowrap">Contact to support</span>
         </button-green>
     </div>
-    <div class="grid grid-cols-2 gap-[45px]">
 
-        <div class="shadow-[0px_0px_15.3px_0px_#daddff] rounded-[25px] bg-[#fcfffe] pl-[48px] pr-[52px] pt-[38px] pb-[36px]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[45px]">
+
+        <div class="shadow-[0px_0px_15.3px_0px_#daddff] rounded-2xl sm:rounded-[25px] bg-[#fcfffe] p-5 sm:pl-[48px] sm:pr-[52px] sm:pt-[38px] sm:pb-[36px]">
             <h3 class="text-[#515971] text-lg font-normal leading-6 mb-[43px]">Personal data change</h3>
             <div class="mb-5">
                 <label class="block text-[#515971] text-base font-semibold leading-6 mb-3">Country</label>
@@ -44,12 +45,12 @@ export default {
                 <label class="block text-[#515971] text-base font-semibold leading-6 mb-3">Enter the password</label>
                 <main-input placeholder="Your password" type="email" v-model:value="personal_data['password']"/>
             </div>
-            <button-picton class="w-[288px] h-[59px]">
+            <button-picton class="w-full sm:w-[288px] h-[45px] sm:h-[59px]">
                 <span class="text-[17px] font-extrabold leading-[22px]">Save changes</span>
             </button-picton>
         </div>
 
-        <div class="shadow-[0px_0px_15.3px_0px_#daddff] rounded-[25px] bg-[#fcfffe] pl-[48px] pr-[52px] pt-[38px] pb-[36px]">
+        <div class="shadow-[0px_0px_15.3px_0px_#daddff] rounded-2xl sm:rounded-[25px] bg-[#fcfffe] p-5 sm:pl-[48px] sm:pr-[52px] sm:pt-[38px] sm:pb-[36px]">
             <h3 class="text-[#515971] text-lg font-normal leading-6 mb-[43px]">Personal data change</h3>
             <div class="mb-5">
                 <label class="block text-[#515971] text-base font-semibold leading-6 mb-3">Current password</label>
@@ -64,7 +65,7 @@ export default {
                 <main-input type="password" placeholder="Your password" v-model:value="personal_data['new_password_confirm']"/>
             </div>
             <p class="text-[#949bb7] text-xs font-normal leading-[18px] mb-16">Fill out the form below to change your password. When you create your new password, please be sure: It is 5-20 characters long.</p>
-            <button-picton class="w-[288px] h-[59px]">
+            <button-picton class="w-full sm:w-[288px] h-[45px] sm:h-[59px]">
                 <span class="text-[17px] font-extrabold leading-[22px]">Save changes</span>
             </button-picton>
         </div>
