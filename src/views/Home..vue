@@ -49,7 +49,7 @@ export default {
                             <main-input placeholder="Your name"></main-input>
                             <main-select :options="countr_list"></main-select>
                             <main-input type="email" placeholder="E-mail"></main-input>
-                            <input-phone width="56"></input-phone>
+                            <input-phone :width="56"></input-phone>
                             <div class="text-[#735cff] w-full text-[8px] font-normal leading-6 tracking-[0%] text-left">
                                 By pressing the button accept our <a class="border-b-[#735cff] border-b border-solid" href="#">Terms and Conditions</a>
                             </div>

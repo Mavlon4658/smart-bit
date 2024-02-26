@@ -1,5 +1,5 @@
 <script>
-import i18n from '../lang'
+// import i18n from '../lang'
 
 export default {
     name: "Header",
