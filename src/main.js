@@ -1,9 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import components from './components/UI'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import components from './components/UI';
 import Particles from "vue3-particles";
-import './style.css'
+import i18n from './lang/index';
+import './style.css';
 
 const app = createApp(App)
 
@@ -12,6 +13,7 @@ for (const [key, value] of Object.entries(components)) {
 }
 
 app
+    .use(i18n)
     .use(router)
     .use(Particles)
     .mount('#app')
