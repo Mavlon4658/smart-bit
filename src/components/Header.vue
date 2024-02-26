@@ -69,10 +69,6 @@ export default {
                     {{ $t('salom') }}
                 </div>
                 
-                <div class="text-3xl text-white">
-                    {{ $t('salom') }}
-                </div>
-                
                 <nav v-if="!checkLogIn()" class="hidden xl:flex items-center gap-10">
                     <router-link
                         class="text-white text-lg font-bold leading-[23px] tracking-[0%] text-left uppercase"
