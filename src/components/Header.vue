@@ -40,7 +40,7 @@ export default {
             }
         },
         selectLang (item) {
-            i18n.global.locale.value = item.name.toLowerCase();
+            // i18n.global.locale.value = item.name.toLowerCase();
             this.value = item;
             this.langListToggle();
         },
@@ -64,10 +64,6 @@ export default {
         <main-container>
             <div class="flex items-center justify-between">
                 <Logo :class="{'translate-y-1': checkLogIn()}"/>
-
-                <div class="text-3xl text-white">
-                    {{ $t('salom') }}
-                </div>
                 
                 <nav v-if="!checkLogIn()" class="hidden xl:flex items-center gap-10">
                     <router-link
