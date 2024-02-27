@@ -33,7 +33,7 @@ export default {
 <template>
     <div>
         <div class="shadow-[0px_0px_15.3px_0px_#daddff] rounded-[25px] bg-white p-5 lg:pt-[27px] lg:pl-[47px] lg:pr-[52px] lg:pb-8">
-            <label class="block text-[#515971] text-lg font-normal leading-6 mb-6">Сhoose the type of payment</label>
+            <label class="block text-[#515971] text-lg font-normal leading-6 mb-6">{{ $t('payment_select.title') }}</label>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-x-7 lg:gap-y-[15px] mb-10 select-none">
                 <button
                     v-for="(item, i) in payment"
@@ -48,8 +48,8 @@ export default {
                     <img :src="item.icon" class="scale-75 md:scale-100" alt="">
                 </button>
             </div>
-            <p class="mb-9 text-[#5b6076] text-[13px] font-normal leading-[18px]">Applications for the withdrawal of customer funds fall into the financial department of the company and are processed in the order of the general queue. The period for processing an application for withdrawal of funds ranges from several hours to one business day.</p>
-            <p class="text-[#5b6076] text-[13px] font-normal leading-[18px]">To withdraw funds from a personal account, you do not need to pay anything extra. There are no additional payments, no taxes and other fees. Only a commission is charged by the bank, according to your tariff plan.</p>
+            <p class="mb-9 text-[#5b6076] text-[13px] font-normal leading-[18px]">{{ $t('payment_select.description[0]') }}</p>
+            <p class="text-[#5b6076] text-[13px] font-normal leading-[18px]">{{ $t('payment_select.description[1]') }}</p>
         </div>
     </div>
 </template>

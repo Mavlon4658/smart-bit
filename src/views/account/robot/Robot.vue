@@ -4,8 +4,50 @@ export default {
     name: 'Robot',
     data () {
         return {
-            table: {
-                head: [ 'Котировка', 'Инвестиция', 'Баланс до', 'Баланс после', 'Цена открытия', 'Цена закрытия', 'Начало', 'Конец', 'Позиция', 'Выигрыш', 'Статус' ],
+            account_name: '',
+            current_balance: 'USDT 497.90',
+            currencies: ['AUD/JPY', 'EUR/GBP', 'GBP/USD', 'USD/JPY', 'BTC/USD', 'AUD/USD', 'EUR/JPY', 'NZD/USD', 'GBP/AUD', 'LTC/USD', 'EUR/AUD', 'EUR/USD', 'USD/CAD', 'GBP/CAD', 'XRP/USD', 'EUR/CAD', 'GBP/JPY', 'USD/CHF', 'NZD/CHF', 'ETH/USD'],
+            selected_currency: ['AUD/JPY', 'USD/JPY', 'GBP/AUD', 'EUR/USD', 'XRP/USD'],
+            voise_animation: false,
+        }
+    },
+    methods: {
+        selectCurrency (currency) {
+            if (this.selected_currency.includes(currency)) {
+                this.selected_currency.splice(this.selected_currency.indexOf(currency), 1);
+            } else {
+                this.selected_currency.push(currency)
+            }
+        },
+        getRandomBgColor (idx) {
+            const colors = ['bg-[#57D188]', 'bg-[#36BEF8]', 'bg-[#366AEF]'];
+            if (idx == 2 || idx == 8 || idx == 14 || idx == 17 || idx == 23 || idx == 29) {
+                return colors[2]
+            } else if (idx == 3 || idx == 5 || idx == 7 || idx == 9 || idx == 11 || idx == 13 || idx == 18 || idx == 20 || idx == 22 || idx == 24 || idx == 26 || idx == 28) {
+                return colors[1]
+            } else {
+                return colors[0]
+            }
+        },
+        getRandomAnimationDuration (idx) {
+            const duration = ['0', '200', '400', '600', '800' ];
+            if ( idx == 5 || idx == 11 || idx == 20 || idx == 26) {
+                return duration[0];
+            } else if (idx == 2 || idx == 8 || idx == 14 || idx == 17 || idx == 23 || idx == 29) {
+                return duration[1];
+            } else if (idx == 4 || idx == 6 || idx == 10 || idx == 12 || idx == 19 || idx == 21 || idx == 25 || idx == 27) {
+                return duration[2];
+            } else if (idx == 1 || idx == 9 || idx == 15 || idx == 16 || idx == 24 || idx == 30) {
+                return duration[3];
+            } else {
+                return duration[4];
+            }
+        }
+    },
+    computed: {
+        table () {
+            return {
+                head: this.$tm('robot.table_head'),
                 body: [
                     [
                         { val: 'LTCUSD', className: ''},
@@ -60,44 +102,6 @@ export default {
                         { val: 'Win', className: 'font-semibold'} 
                     ],
                 ]
-            },
-            account_name: '',
-            current_balance: 'USDT 497.90',
-            currencies: ['AUD/JPY', 'EUR/GBP', 'GBP/USD', 'USD/JPY', 'BTC/USD', 'AUD/USD', 'EUR/JPY', 'NZD/USD', 'GBP/AUD', 'LTC/USD', 'EUR/AUD', 'EUR/USD', 'USD/CAD', 'GBP/CAD', 'XRP/USD', 'EUR/CAD', 'GBP/JPY', 'USD/CHF', 'NZD/CHF', 'ETH/USD'],
-            selected_currency: ['AUD/JPY', 'USD/JPY', 'GBP/AUD', 'EUR/USD', 'XRP/USD'],
-            voise_animation: false,
-        }
-    },
-    methods: {
-        selectCurrency (currency) {
-            if (this.selected_currency.includes(currency)) {
-                this.selected_currency.splice(this.selected_currency.indexOf(currency), 1);
-            } else {
-                this.selected_currency.push(currency)
-            }
-        },
-        getRandomBgColor (idx) {
-            const colors = ['bg-[#57D188]', 'bg-[#36BEF8]', 'bg-[#366AEF]'];
-            if (idx == 2 || idx == 8 || idx == 14 || idx == 17 || idx == 23 || idx == 29) {
-                return colors[2]
-            } else if (idx == 3 || idx == 5 || idx == 7 || idx == 9 || idx == 11 || idx == 13 || idx == 18 || idx == 20 || idx == 22 || idx == 24 || idx == 26 || idx == 28) {
-                return colors[1]
-            } else {
-                return colors[0]
-            }
-        },
-        getRandomAnimationDuration (idx) {
-            const duration = ['0', '200', '400', '600', '800' ];
-            if ( idx == 5 || idx == 11 || idx == 20 || idx == 26) {
-                return duration[0];
-            } else if (idx == 2 || idx == 8 || idx == 14 || idx == 17 || idx == 23 || idx == 29) {
-                return duration[1];
-            } else if (idx == 4 || idx == 6 || idx == 10 || idx == 12 || idx == 19 || idx == 21 || idx == 25 || idx == 27) {
-                return duration[2];
-            } else if (idx == 1 || idx == 9 || idx == 15 || idx == 16 || idx == 24 || idx == 30) {
-                return duration[3];
-            } else {
-                return duration[4];
             }
         }
     }
@@ -146,7 +150,7 @@ export default {
         </button>
     </div>
 
-    <div class="text-[#202337] text-[17px] font-normal leading-[22px] lg:ml-7">Информация о работе алгоритма</div>
+    <div class="text-[#202337] text-[17px] font-normal leading-[22px] lg:ml-7">{{ $t('robot.table_title') }}</div>
     <div class="sm:mb-[58px]">
         <main-table :head_size="14" :body_size="13" :table="table" :table_width="1110"></main-table>
     </div>

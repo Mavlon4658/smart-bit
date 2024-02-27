@@ -50,17 +50,17 @@ export default {
 <template>
     <main-container class="pb-5 sm:pb-0">
         <div ref="link_wrap" class="px-5 -ml-5 w-[calc(100%_+40px)] scrollbar overflow-y-scroll">
-            <div class="pt-9 pb-9 lg:pb-14 grid grid-cols-7 gap-3 lg:gap-5 w-[860px] lg:w-auto">
+            <div class="pt-9 pb-9 xl:pb-14 grid grid-cols-7 gap-3 xl:gap-5 w-[1000px] xl:w-auto">
                 <router-link
                     :to="item.path_name != '' ? {name : item.path_name}: '#'"
                     v-for="(item, i) in tab_head"
                     :key="i"
-                    class="pt-3 pb-[9px] text-center shadow-[0px_0px_31.4px_0px_#daddff] rounded-[5px] text-[#202337] text-base lg:text-lg font-bold lg:leading-[23px]"
+                    class="flex items-center justify-center pt-3 pb-[9px] text-center shadow-[0px_0px_31.4px_0px_#daddff] rounded-[5px] text-[#202337] text-base xl:text-lg font-bold xl:leading-[23px]"
                     :class="{
                         'bg-[#366aef] !text-white': item.path_name == $route.name || ($route.name == 'RobotKey' && item.title == 'Robot')
                     }"
                 >
-                    {{ item.title }}
+                    {{ $tm('account.tab_head')[i] }}
                 </router-link>
             </div>
         </div>

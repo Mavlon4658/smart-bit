@@ -39,7 +39,7 @@ export default {
         ></main-input>
         <main-input
             type="tel"
-            placeholder="Телефон"
+            :placeholder="$t('home.start_trade.phone')"
             :class="[
                 (height != 0 ? `h-[${height}px]` : ''),
                 (size != 0 ? `text-[${size}px]`: ''),

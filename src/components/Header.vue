@@ -1,24 +1,22 @@
 <script>
 import i18n from '../lang'
 
-// import i18n from '../lang'
-
 export default {
     name: "Header",
     data () {
         return {
             navs: [
-                {title: 'Info', path: 'Faq'},
-                {title: 'About Us', path: 'AboutUs'},
-                {title: 'Bonus', path: 'Bonus'},
+                {title: 'info', path: 'Faq'},
+                {title: 'about_as', path: 'AboutUs'},
+                {title: 'bonus', path: 'Bonus'},
             ],
             navs2: [
-                {title: 'Analitics', path: ''},
-                {title: 'Info', path: 'Faq'},
-                {title: 'Trade', path: ''},
-                {title: 'About Us', path: 'AboutUs'},
-                {title: 'Bonus', path: 'Bonus'},
-                {title: 'Account', path: 'Account'},
+                {title: 'analytics', path: ''},
+                {title: 'info', path: 'Faq'},
+                {title: 'trade', path: ''},
+                {title: 'about_as', path: 'AboutUs'},
+                {title: 'bonus', path: 'Bonus'},
+                {title: 'account', path: 'Account'},
             ],
             lang_list: [
                 {name: "En", flag: 'GB'},
@@ -52,7 +50,7 @@ export default {
             }
             else false
         }
-    }
+    },
 }
 </script>
 
@@ -66,10 +64,6 @@ export default {
         <main-container>
             <div class="flex items-center justify-between">
                 <Logo :class="{'translate-y-1': checkLogIn()}"/>
-
-                <div class="text-3xl text-white">
-                    {{ $t('salom') }}
-                </div>
                 
                 <nav v-if="!checkLogIn()" class="hidden xl:flex items-center gap-10">
                     <router-link
@@ -78,17 +72,19 @@ export default {
                         v-for="(item, i) in navs"
                         :key="i"
                     >
-                        {{ item.title }}
+                        {{ $t('header.' + item.title) }}
                     </router-link>
                 </nav>
-                <nav v-if="checkLogIn()" class="hidden xl:flex items-center gap-10">
+
+
+                <nav v-if="checkLogIn()" class="hidden xl:flex items-center gap-8">
                     <router-link
                         class="relative text-white text-base font-bold leading-5"
                         :to="{name: item.path}"
                         v-for="(item, i) in navs2"
                         :key="i"
                     >
-                        {{ item.title }}
+                        {{ $t('header.' + item.title) }}
                         <span class="absolute w-[calc(100%_+_6px)] h-0.5 bg-[#57D188] left-[-3px] bottom-[-7px]" :class="{'hidden': item.path != $route.name}"></span>
                     </router-link>
                 </nav>
@@ -121,7 +117,7 @@ export default {
                     <router-link
                         v-if="checkLogIn()"
                         :to="{name: 'Account'}"
-                        class="hidden xl:flex gap-[18px] items-start"
+                        class="hidden xl:flex gap-[10px] items-start"
                     >
                         <img class="w-[37px] h-[37px] object-cover rounded-[50%]" src="../assets/images/user_logo.png" alt="">
                         <span class="hidden flex-col 2xl:flex">
@@ -138,13 +134,13 @@ export default {
                     <div v-if="!checkLogIn()" class="hidden xl:flex items-center gap-[15px]">
                         <router-link :to="{name: 'Register'}">
                             <button-picton class="h-[46px] w-[198px] gap-10">
-                                <span>REGISTRATION</span>
+                                <span>{{ $t('sign_up') }}</span>
                                 <img src="../assets/images/icons/arrow-rigth.svg" alt="">
                             </button-picton>
                         </router-link>
                         <router-link :to="{name: 'LogIn'}">
                             <button-green class="h-[46px] w-[136px] gap-10">
-                                <span>Login</span>
+                                <span>{{ $t('log_in') }}</span>
                                 <img src="../assets/images/icons/arrow-rigth.svg" alt="">
                             </button-green>
                         </router-link>
@@ -176,6 +172,7 @@ export default {
                 </div>
             </div>
         </main-container>
+        
 
         <!-- Mobile menu -->
         <div
@@ -193,16 +190,16 @@ export default {
                 }"
             ></div>
             <div
-                class="bg-white relative w-[300px] h-full top-0 right-0 px-3 pt-9 pb-5 transition-[0.4s] duration-[ease-in-out] ease-[all] delay-400"
+                class="bg-white relative w-[300px] h-full top-0 right-0 px-3 pb-5 transition-[0.4s] duration-[ease-in-out] ease-[all] delay-400"
                 :class="{
                     'translate-x-full': !menu_active,
                     'translate-x-0': menu_active,
                 }"
             >
-                <div class="flex justify-between">
+                <div class="flex justify-between pt-9 pb-5 w-[calc(100%_+24px)] -ml-3 px-3 bg-[#1C1D2E]">
                     <Logo class="!text-black"/>
                     <button class="w-5" @click="menu_active = false">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path class="fill-[#515971]" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path class="fill-white" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
                     </button>
                 </div>
 
@@ -244,7 +241,7 @@ export default {
                         :key="i"
                         @click="menu_active = false"
                     >
-                        {{ item.title }}
+                        {{ $t('header.' + item.title) }}
                     </router-link>
                 </nav>
 
@@ -256,20 +253,20 @@ export default {
                         :key="i"
                         @click="menu_active = false"
                     >
-                        {{ item.title }}
+                        {{ $t('header.' + item.title) }}
                     </router-link>
                 </nav>
 
                 <div v-if="!checkLogIn()" class="flex flex-col items-center mt-5 gap-[15px]">
                     <router-link :to="{name: 'Register'}" class="w-full">
                         <button-picton class="h-[46px] w-full justify-between px-4 gap-10" @click="menu_active = false">
-                            <span>REGISTRATION</span>
+                            <span>{{ $t('sign_up') }}</span>
                             <img src="../assets/images/icons/arrow-rigth.svg" alt="">
                         </button-picton>
                     </router-link>
                     <router-link :to="{name: 'LogIn'}" class="w-full">
                         <button-green class="h-[46px] w-full justify-between px-4 gap-10" @click="menu_active = false">
-                            <span>Login</span>
+                            <span>{{ $t('log_in') }}</span>
                             <img src="../assets/images/icons/arrow-rigth.svg" alt="">
                         </button-green>
                     </router-link>
