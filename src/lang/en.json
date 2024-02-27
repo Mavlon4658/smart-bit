@@ -67,7 +67,7 @@
         "support": "For all questions please contact customer support:",
         "descriptions": [
             "You haven`t made any investments in Option builder tool yet. To make an investment you should: Choose the asset you want to trade with, enter your current investment amount. And choose how will asset behavior: if it will rise - press HIGH button, other way press LOW button. Select the profit and the pay off level. Confirm your deal with the Confirmal button. Due to different time zones at the worldwide stocks, some assets could be inactive or might has limited availability. If the asset`s value didn`t change sinse made an investment, the full investment price will be returned to investor.",
-            "Legal: auto-bitrading.com is a trading name of BitTrading, registration number: IBC 2015 (Suite 305, Griffith Corporate Centre, Beachmont, Kingstown, St. Vincent and the Grenadines)"
+            "Legal: auto-bitrading.com is a trading name of Smart-bit-trade, registration number: IBC 2015 (Suite 305, Griffith Corporate Centre, Beachmont, Kingstown, St. Vincent and the Grenadines)"
         ]
     },
     "faq": {
@@ -83,14 +83,14 @@
                 {"name": "Could i finish the deal before expiration time?", "description": "After confirming the deal, expiration time couldn`t be changed."},
                 {"name": "What return will I get in the event that the option expires out-of-the-money?", "description": "In the event that the option expires out-of-the-money, you`ll recieve a refund, depending of selected profit/refund level (Available in options builder only). For example: investment with a 60/20% profit means, that you will recieve your investment and the 60% of investment if you`ll win, otherway you will get a 20% refund of investment. However refund in lost options are not available in \"60 seconds\" and \"Classic binary options\" because of high profit level."},
                 {"name": "What is expiration time", "description": "The expiration time is the time and date on which an option expires."},
-                {"name": "Do I have to download software in order to trade with BitTrading?", "description": "There is absolutely no need for you to download anything before you can start trading with BitTrading. All you need to do is register and deposit funds into your account and you`ll be ready to start trading binary options for yourself."},
+                {"name": "Do I have to download software in order to trade with Smart-bit-trade?", "description": "There is absolutely no need for you to download anything before you can start trading with Smart-bit-trade. All you need to do is register and deposit funds into your account and you`ll be ready to start trading binary options for yourself."},
                 {"name": "How does the company recieve quotes?", "description": "Stock provides binary options with current price of different assets regularly."},
                 {"name": "What does an Underlying Asset means?", "description": "It means the option you create using a commodity, index, stock, currency pair or any other financial asset."},
                 {"name": "How to invest?", "description": "Investment is easy: choose your asset to trade and choose \"call\" or a \"put\" option by clicking on it. Clicking on the call/put button will open a quick investment window where you need to type in the amount you wish to invest and approve execution. Keep in mind that rates keep updating in the investment sheet."},
                 {"name": "How could i cancel the deal if i did not push a \"Submit\" button?", "description": "The deal will not apply until you push a \"Submit\" button. So You can choose another asset or just select another trading tool."},
                 {"name": "What is the expiry level?", "description": "The expiry level is the level of the underlying asset at the time of expiry of the asset according to Stock."},
                 {"name": "What happens if the expiry level of a given underlying asset is identical to the level at which the transaction was made?", "description": "In case of expiry at an identical level to the transaction level, the amount of the investment is returned to the customer."},
-                {"name": "Why can`t I make an investment?", "description": "Investments in all assets can be made during market trading hours, Outside market trading hours, the asset will not be displayed. Further reason might be a lack of funds in your account for the requested investment. In any other case please contact our support team at support@BitTrading.com"},
+                {"name": "Why can`t I make an investment?", "description": "Investments in all assets can be made during market trading hours, Outside market trading hours, the asset will not be displayed. Further reason might be a lack of funds in your account for the requested investment. In any other case please contact our support team at support@Smart-bit-trade.com"},
                 {"name": "Why do assets are not displayed sometimes?", "description": "Only active assets open for trading are available for making an investment."},
                 {"name": "Do i have to make a deposit to register?", "description": "Registration does not require deposit and absolutely free"},
                 {"name": "What is the difference between stock and binary options?", "description": "Classic \"vanilla\" stock options has a much bigger expire time and uknown profit. Binary options may last even one minute and has a fixed profit level."},
@@ -111,9 +111,9 @@
         "title": "About us",
         "btn": "Start trading",
         "descriptions": [
-            "Market BitTrading was developed in 2012 for both beginners and skilled traders who choose to trade safely on the binary options market, acquire decision-making skills and keep up to date on international economic and financial developments.",
-            "Market BitTrading relies on a team of professionals of the financial market, whose mission is to advise and assist customers in their investments and make efforts so that they would benefit from multiple profit opportunities.",
-            "Having analyzed the investor’s profile, we set up an efficient and profitable \"Money Management\", which is fully customized to the investors needs. Market BitTrading offers access to binary options trading for everyone via the fusion of a simple interface, ongoing support and an available and proactive professional team.",
+            "Smart-bit-trade was developed in 2012 for both beginners and skilled traders who choose to trade safely on the binary options market, acquire decision-making skills and keep up to date on international economic and financial developments.",
+            "Smart-bit-trade relies on a team of professionals of the financial market, whose mission is to advise and assist customers in their investments and make efforts so that they would benefit from multiple profit opportunities.",
+            "Having analyzed the investor’s profile, we set up an efficient and profitable \"Money Management\", which is fully customized to the investors needs. Smart-bit-trade offers access to binary options trading for everyone via the fusion of a simple interface, ongoing support and an available and proactive professional team.",
             "We strive to provide the highest level of customer service in order to achieve our goal of 100% customer satisfaction.lopments."
         ]
     },

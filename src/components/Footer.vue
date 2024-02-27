@@ -66,7 +66,7 @@ export default {
                             </div>
                         </div>
                         <router-link :to="{name: 'Register'}">
-                            <button-picton class="h-[46px] w-[198px]">
+                            <button-picton class="h-[46px] w-[198px] shrink-0 px-[17px] justify-between">
                                 <span>{{ $t('sign_up') }}</span>
                                 <img src="../assets/images/icons/arrow-rigth.svg" alt="">
                             </button-picton>
