@@ -143,8 +143,8 @@
     },
     "authtorization": {
         "title": "АВТОРИЗАЦИЯ",
-        "your_login": "Your login",
-        "password": "Password",
+        "your_login": "Ваш логин",
+        "password": "Пароль",
         "forgot": "Забыли пароль?",
         "btn": "Войти",
         "have_not_account": "У вас нет аккаунта?"
